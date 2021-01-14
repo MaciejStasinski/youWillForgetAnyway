@@ -38,7 +38,7 @@ public class HelloServiceTest {
         //given
         var mockRepository = new LanguageRepository(){
             @Override
-            Optional<Language> findById(Long id) {
+            Optional<Language> findById(Integer id) {
                 return Optional.empty();
             }
         };
@@ -77,7 +77,7 @@ public class HelloServiceTest {
     private LanguageRepository fallbackLangIdRepository() {
         return new LanguageRepository() {
             @Override
-            Optional<Language> findById(Long id) {
+            Optional<Language> findById(Integer id) {
                 if (id.equals(HelloService.FALLBACK_LANGUAGE.getId())) {
                     return Optional.of(new Language(null, FALLBACK_ID_WELCOME, null));
                 }
@@ -89,7 +89,7 @@ public class HelloServiceTest {
     private LanguageRepository alwaysReturningHelloRepository(){
         return new LanguageRepository() {
             @Override
-            Optional<Language> findById(Long id) { return Optional.of(new Language(null, WELCOME, null));
+            Optional<Language> findById(Integer id) { return Optional.of(new Language(null, WELCOME, null));
             }
         };
     }
