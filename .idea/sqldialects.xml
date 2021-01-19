@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/../Spring/spring-boot-jpa-hibernate/src/main/resources/V1__Create_languages_table.sql" dialect="H2" />
+    <file url="file://$PROJECT_DIR$/../Spring/spring-boot-jpa-hibernate/src/main/resources/V2__Add_languages.sql" dialect="H2" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/db/migration/V1__Create_languages_table.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/db/migration/V2__Add_languages.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/db/migration/V3__Add_Norsk_language.sql" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/db/migration/V4__Add_todo_table_and_data.sql" dialect="GenericSQL" />
+  </component>
+</project>

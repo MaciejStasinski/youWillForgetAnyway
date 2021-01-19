@@ -1,4 +1,4 @@
-package youWillForgetAnyway;
+package youWillForgetAnyway.Language;
 
 import org.hibernate.annotations.GenericGenerator;
 
@@ -9,7 +9,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table ( name = "languages")
-class Language {
+public class Language {
     @Id
     @GeneratedValue(generator="inc")
     @GenericGenerator(name="inc", strategy = "increment")
@@ -17,16 +17,17 @@ class Language {
     private String welcomeMsg;
     private String code;
 
-    public Language(Integer id, String welcomeMsg, String code) {
-        this.id = id;
-        this.welcomeMsg = welcomeMsg;
-        this.code = code;
-    }
     /**
      * Hibernate (JPA)needs it
      * */
     @SuppressWarnings("unused")
     public Language() {
+    }
+
+    public Language(Integer id, String welcomeMsg, String code) {
+        this.id = id;
+        this.welcomeMsg = welcomeMsg;
+        this.code = code;
     }
 
     public Integer getId() {
