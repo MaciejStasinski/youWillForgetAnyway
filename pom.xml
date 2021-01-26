@@ -108,6 +108,14 @@
                     <target>${java.version}</target>
                 </configuration>
             </plugin>
+            <plugin>
+                <configuration>
+                    <appName>todo-list--spring</appName>
+                </configuration>
+                <groupId>com.heroku.sdk</groupId>
+                <artifactId>heroku-maven-plugin</artifactId>
+                <version>3.0.3</version>
+            </plugin>     
         </plugins>
     </build>
 </project>
